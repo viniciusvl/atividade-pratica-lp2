@@ -29,6 +29,24 @@
 | **Distribuição Linux** | Ubuntu 24.04 LTS |
 | **Padrão de Thread** | POSIX threads (pthreads) |
 
+## Estrutura de Arquivos
+
+```
+atividade-pratica/
+├── Makefile              # Regras de compilação do projeto
+├── plot.py               # Script Python para gerar o gráfico de speedup
+├── inputs/
+│   └── words.txt         # Arquivo de entrada gerado automaticamente
+└── src/
+    ├── main.c            # Ponto de entrada: orquestra medições e imprime resultados
+    ├── create_input.c    # Gera o arquivo de palavras aleatórias em inputs/words.txt
+    ├── data.c            # Lê o arquivo de entrada em memória
+    ├── sequencial.c      # Contagem de palavras em modo sequencial
+    ├── threads.c         # Contagem de palavras em modo paralelo com pthreads
+    └── graficos/
+        └── speedup.png   # Gráfico de speedup gerado pelo plot.py
+```
+
 ## Compilação
 
 **Execute o comando abaixo para compilar o projeto:**
